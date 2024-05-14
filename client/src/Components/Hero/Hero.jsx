@@ -10,10 +10,10 @@ const Hero = () => {
     const text = "Explore trends in every hue, Shop fashion that's just for you. From runway to your doorstep, Style made simple, shop and adore".split(" ");
 
     return (
-        <div className="pb-6 sm:pb-8 lg:pb-12">
+        <div className="pb-2 sm:pb-8 lg:pb-12">
 
             <section className="mx-auto max-w-screen-2xl px-4 md:px-8">
-                <div className="mb-8 flex flex-wrap justify-between md:mb-16">
+                <div className="mb-4 flex flex-wrap justify-between md:mb-16">
                     <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48">
                         <div className='flex flex-row gap-4'>
                             <h1 className="mb-4 text-4xl font-extrabold text-stone-800 sm:text-5xl md:mb-8 md:text-6xl">Find your<br />style online</h1>
