@@ -21,7 +21,7 @@ function Header() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto ml-8 gap-3 my-2 my-lg-0 navTabs text-slate-900" navbarScroll>
+          <Nav className="me-auto ml-8 gap-3 my-2 my-lg-0 navTabs text-slate-900 sm:w-5" navbarScroll>
             <Link onClick={() => setMenu("shop")} to="/" className=''>
               Shop{menu==="shop" ? <hr/> : <></>}
             </Link>
@@ -35,7 +35,7 @@ function Header() {
               Kids{menu==="kids" ? <hr/> : <></>}
             </Link>
           </Nav>
-          <Nav className="flex flex-row justify-center items-center my-2 my-lg-0 text-center hover:bg-red-300 text-slate-900" navbarScroll>
+          <Nav className="flex flex-row justify-center items-center my-2 my-lg-0 text-center text-slate-900" navbarScroll>
             <Link to="/cart">
               <FontAwesomeIcon className='mr-8 mt-2 h-8 w-8 justify-center items-center' icon={faShoppingCart} />
             </Link>

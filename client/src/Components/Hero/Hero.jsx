@@ -4,7 +4,7 @@ import bgImage1 from '../../Assets/bgImg1.jpg'
 import bgImage2 from '../../Assets/bgImg2.jpg'
 import { motion } from "framer-motion";
 import LottieAnimation from '../../Lottifiles/ShoppingLottie';
-
+import {Link} from 'react-router-dom'
 
 const Hero = () => {
     const text = "Explore trends in every hue, Shop fashion that's just for you. From runway to your doorstep, Style made simple, shop and adore".split(" ");
@@ -52,9 +52,9 @@ const Hero = () => {
 
                 <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
                     <div className="flex h-12 w-64 divide-x overflow-hidden rounded-lg border">
-                        <a href="#" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200">Men</a>
-                        <a href="#" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200">Women</a>
-                        <a href="#" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200">Teens</a>
+                        <Link to="/men" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200">Men</Link>
+                        <Link to="/women" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200">Women</Link>
+                        <Link to="kids" className="flex w-1/3 items-center justify-center text-gray-500 transition duration-100 hover:bg-gray-100 active:bg-gray-200">kids</Link>
                     </div>
 
                     <div className="flex items-center justify-center gap-4 lg:justify-start">

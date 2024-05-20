@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Item = (props) => {
     return (
         <div className="lg:w-1/4 md:w-1/2 p-8 w-full hover:scale-110 duration-150 cursor-pointer">
             <a className="block relative h-84 rounded overflow-hidden">
-                <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={props.image} />
+                <Link to={`/product/${props.id}`}>
+                    <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={props.image} />
+                </Link>
             </a>
             <div className="mt-4">
                 {/* <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3> */}
