@@ -7,19 +7,19 @@ const Cart = () => {
   const { all_product, cartItems, removeFromCart, addToCart, getTotalAmount } = useContext(ShopContext)
 
   return (
-    <div className="bg-white py-6 sm:py-8 lg:py-12">
+    <div className="py-6 sm:py-8 lg:py-12">
       <div className="mx-auto max-w-screen-lg px-4 md:px-8">
 
         <div className="mb-5 flex flex-col sm:mb-8 sm:divide-y sm:border-t sm:border-b">
 
           {all_product.map((e, index) => {
             if (cartItems[e.id] > 0) {
-              return <>
+              return (
                 <div key={index} className="py-2 sm:py-8">
                   <div className="flex flex-wrap gap-4 sm:py-2.5 lg:gap-6">
                     <div className="sm:-my-2.5">
-                      <a href="#" className="group relative block h-24 w-16 overflow-hidden rounded-lg bg-gray-100 sm:h-56 sm:w-40">
-                        <img src={e.image} loading="lazy" alt="Photo by Thái An" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                      <a href="#" className="group relative block h-16 w-12 overflow-hidden rounded-lg bg-gray-100 sm:h-40 sm:w-28">
+                        <img src={e.image} loading="lazy" alt="Product Image" className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
                       </a>
                     </div>
 
@@ -39,16 +39,16 @@ const Cart = () => {
 
                     <div className="flex w-full justify-between border-t pt-4 sm:w-auto sm:border-none sm:pt-0">
                       <div className="flex flex-col items-start gap-2">
-                        <div className="flex h-12 w-20 overflow-hidden rounded border">
-                          <div type="number" className="w-full px-4 py-2 outline-none ring-inset ring-indigo-300 transition duration-100 focus:ring" >{cartItems[e.id]}</div>
+                        <div className="flex h-12 w-20 overflow-hidden border">
+                          <div type="number" className="font-bold text-lg text-center w-full px-2 py-2 outline-none ring-inset ring-red-300 transition duration-100 focus:ring" >{cartItems[e.id]}</div>
 
                           <div className="flex flex-col divide-y border-l">
-                            <button onClick={() => { addToCart(e.id) }} className="flex w-6 flex-1 select-none items-center justify-center bg-white leading-none transition duration-100 hover:bg-gray-100 active:bg-gray-200">+</button>
-                            <button onClick={() => { removeFromCart(e.id) }} className="flex w-6 flex-1 select-none items-center justify-center bg-white leading-none transition duration-100 hover:bg-gray-100 active:bg-gray-200">-</button>
+                            <button onClick={() => { addToCart(e.id) }} className=" font-bold text-lg flex w-6 flex-1 select-none items-center justify-center bg-white leading-none transition duration-100 hover:bg-gray-100 active:bg-gray-200">+</button>
+                            <button onClick={() => { removeFromCart(e.id) }} className=" font-bold text-lg flex w-6 flex-1 select-none items-center justify-center bg-white leading-none transition duration-100 hover:bg-gray-100 active:bg-gray-200">-</button>
                           </div>
                         </div>
 
-                        <button onClick={() => { removeFromCart(e.id) }} className="select-none text-sm font-semibold text-indigo-500 transition duration-100 hover:text-indigo-600 active:text-indigo-700">Delete</button>
+                        <button onClick={() => { removeFromCart(e.id) }} className="text-center select-none text-sm font-semibold text-red-500 transition duration-100 hover:text-red-600 active:text-red-700">Delete</button>
                       </div>
 
                       <div className="ml-4 pt-3 sm:pt-2 md:ml-8 lg:ml-16">
@@ -57,8 +57,9 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-              </>
+              );
             }
+            return null;
           })}
 
         </div>
@@ -89,7 +90,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <button className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Check out</button>
+          <button className="inline-block bg-red-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-red-300 transition duration-100 hover:bg-red-600 focus-visible:ring active:bg-red-700 md:text-base">Check out</button>
         </div>
       </div>
     </div>
