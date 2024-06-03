@@ -136,6 +136,34 @@ app.get("/allproduct", async (req, res) => {
   res.send(products);
 });
 
+/*
+ *** Schema for user model
+ */
+
+const users = mongoose.model("Users", {
+  name: {
+    type: String,
+  },
+  email: {
+    type: String,
+  },
+  password: {
+    type: String,
+  },
+  cartData: {
+    type: Object,
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
+});
+
+/*
+ *** Endpoint creation for registering the user
+ */
+
+ 
 //server running
 
 app.listen(port, (error) => {
