@@ -5,7 +5,7 @@ import offerImg from '../../Assets/offerImg.jpg'
 const Offers = () => {
     return (
         <div>
-            <div className="py-6 sm:py-8 lg:py-12">
+            <div className="py-6 sm:py-8 lg:py-12" data-aos="zoom-in">
                 <div className="mx-auto max-w-screen-lg px-4 md:px-8">
                     <div className="flex flex-col overflow-hidden rounded-lg bg-red-100 sm:flex-row md:h-80">
                         <div className="flex w-full flex-col p-4 sm:w-1/2 sm:p-8 lg:w-2/5">

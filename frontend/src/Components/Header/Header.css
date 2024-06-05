@@ -1,22 +1,7 @@
-.title1 {
-  font-weight: bolder;
-  font-size: 1.7rem;
-}
-
-.title2 {
-  font-weight: bolder;
-  font-size: 2rem;
-}
-
-.navbar {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
 
 .navTabs hr {
   width: 100%;
-  height: 6px;
-  border-radius: 10px;
+  height: 2px;
+  border-radius: 5px;
   background-color: red;
 }
-

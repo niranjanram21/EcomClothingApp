@@ -84,7 +84,7 @@ const ProductDisplay = (props) => {
                                 <span className="mb-0.5 text-red-500 line-through">${product.old_price}</span>
                             </div>
 
-                            <span className="text-sm text-gray-500">incl. VAT plus shipping</span>
+                            <span className="text-sm text-gray-500">incl. GST plus shipping</span>
                         </div>
 
                         <div className="mb-6 flex items-center gap-2 text-gray-500">
