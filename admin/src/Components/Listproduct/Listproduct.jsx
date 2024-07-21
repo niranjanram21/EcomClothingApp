@@ -5,7 +5,7 @@ const Listproduct = () => {
 
     const fetchInfo = async () => {
         try {
-            const response = await fetch('http://localhost:4000/allproduct');
+            const response = await fetch('https://ecomclothingapp.onrender.com/allproduct');
             const data = await response.json();
             setAllProducts(data);
         } catch (error) {
@@ -19,7 +19,7 @@ const Listproduct = () => {
 
     const removeProduct = async (id) => {
         try {
-            await fetch('http://localhost:4000/removeproduct', {
+            await fetch('https://ecomclothingapp.onrender.com/removeproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
