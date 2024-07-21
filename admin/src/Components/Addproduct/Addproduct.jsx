@@ -26,7 +26,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product', productDetails.image);
 
-        await fetch('http://localhost:4000/upload', {
+        await fetch('https://ecomclothingapp.onrender.com/upload', {
             method: 'POST',
             body: formData,
         })
@@ -37,7 +37,7 @@ const AddProduct = () => {
             product.image = responseData.image_url;
             console.log(product);
             // Proceed with adding the product to the database
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://ecomclothingapp.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
