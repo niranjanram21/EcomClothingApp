@@ -18,7 +18,7 @@ const LoginSignup = () => {
     e.preventDefault();
     console.log("login", formData);
     let responseData;
-    await fetch('http://localhost:4000/login', { // Assuming the login API endpoint
+    await fetch('https://ecomclothingapp.onrender.com/login', { // Assuming the login API endpoint
       method: 'POST',
       headers: {
         Accept: 'application/form-data',
@@ -41,7 +41,7 @@ const LoginSignup = () => {
     e.preventDefault();
     console.log("signup", formData);
     let responseData;
-    await fetch('http://localhost:4000/signup', {
+    await fetch('https://ecomclothingapp.onrender.com/signup', {
       method: 'POST',
       headers: {
         Accept: 'application/form-data',
