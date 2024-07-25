@@ -6,7 +6,7 @@ const multer = require("multer");
 const path = require("path");
 
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(express.json());
 app.use(cors());
@@ -43,7 +43,7 @@ app.use("/images", express.static("upload/images"));
 app.post("/upload", upload.single("product"), (req, res) => {
   res.json({
     success: 1,
-    image_url: `http://localhost:${port}/images/${req.file.filename}`,
+    image_url: `https://ecomclothingapp.onrender.com/images/${req.file.filename}`,
   });
 });
 
